@@ -42,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 selectedImage = BitmapFactory.decodeStream(imageStream);
 
                 Intent intent = new Intent(MainActivity.this, EditImageActivity.class);
+                startActivity(intent);
             } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }
